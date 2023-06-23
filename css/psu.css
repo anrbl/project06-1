@@ -27,6 +27,15 @@
 
 /* 헤더
 header_top */
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1005;
+    transition: 0.5s;
+}
+
 .header .header_top {
     background: var(--c-w);
     border-bottom: var(--line);
@@ -102,13 +111,6 @@ header_top */
 /* 헤더
 header_bottom */
 .header .header_warp {
-    position: fixed;
-    top: 30px;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: 0.3s;
-
     background: var(--c-w);
     border-bottom: var(--line-w);
 }
@@ -155,6 +157,10 @@ header_bottom */
 
 /* 헤더
 header_on */
+.header.on {
+    transform: translate(0, -31px);
+}
+
 .header.on .header_warp {
     top: 0;
     background: var(--c-main);
@@ -193,7 +199,7 @@ header_on */
 
 .main_Pnuvisual .main_slide .itm {
     position: relative;
-    height: calc(100vh - 30px);
+    height: calc(100vh);
     min-width: 1200px;
     width: 100%;
     overflow: hidden;
@@ -808,13 +814,13 @@ header_on */
 
 .main_PnuScreen .arrow .left {
     position: absolute;
-    top: -20px;
+    top: 110px;
     right: -17px;
 }
 
 .main_PnuScreen .arrow .right {
     position: absolute;
-    top: 20px;
+    top: 150px;
     right: -17px;
 }
 

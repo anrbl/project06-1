@@ -55,7 +55,8 @@ $(function () {
     //pnu screen 유투브 링크
     $('.main_PnuScreen .screen_slide').slick({
         arrows: false,
-        asNavFor: '.main_PnuScreen .screen_list'
+        asNavFor: '.main_PnuScreen .screen_list',
+        fade: true,
     });
     $('.main_PnuScreen .screen_list').slick({
         slidesToShow: 3,
