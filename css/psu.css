@@ -1,0 +1,1751 @@
+:root {
+    --c-main: #005aab;
+    --c-point: #bb0000;
+    --c-sub: #2573da;
+    --c-set: #3491dd;
+
+    --c-b: #000;
+    --c-bb: #333;
+    --c-g6: #666;
+    --c-g9: #999;
+    --c-line: #ddd;
+    --c-ww: #e2e2e2;
+    --c-wb: #f9f9f9;
+    --c-w: #fff;
+
+    --line: 1px solid #ddd;
+    --line-b: 1px solid rgba(0, 0, 0, 0.3);
+    --line-w: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* 
+───────────────────────────────────────────────────── HEADER 🤯
+*/
+
+
+/* 헤더
+header_top */
+.header .header_top {
+    background: var(--c-w);
+    border-bottom: var(--line);
+}
+
+.header .header_top .content {
+    display: flex;
+    justify-content: space-between;
+    height: 29px;
+
+    font-size: 12px;
+}
+
+.header .ht_left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header .ht_right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header #ht_lan {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 3px 7px 4px 7px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    line-height: 1;
+    color: var(--c-g6);
+}
+
+.header .ht_right i {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: var(--c-b);
+    vertical-align: middle;
+}
+
+.header .header_top li {
+    position: relative;
+    color: var(--c-g6);
+}
+
+.header .header_top .ht_left li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 29px;
+    background: var(--c-line);
+}
+
+.header .header_top .ht_right li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 30px;
+    background: var(--c-line);
+}
+
+
+/* 헤더
+header_bottom */
+.header .header_warp {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: 0.3s;
+
+    background: var(--c-w);
+    border-bottom: var(--line-w);
+}
+
+.header .header_warp .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header h1 a {
+    display: block;
+    width: 171px;
+    height: 42px;
+    background: url(../images/logo.png) no-repeat center center;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 30px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+    color: var(--c-bb);
+}
+
+.header .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 12px;
+    background: var(--c-line);
+}
+
+.header .gnb a {
+    display: block;
+    line-height: 80px;
+}
+
+/* 헤더
+header_on */
+.header.on .header_warp {
+    top: 0;
+    background: var(--c-main);
+    border-bottom: var(--line-b);
+}
+
+.header.on h1 a {
+    background: url(../images/logo_w.png);
+}
+
+.header.on .gnb>ul>li {
+    color: var(--c-w);
+}
+
+.header.on .gnb>ul>li~li::before {
+    background: var(--c-set);
+}
+
+
+
+
+
+
+
+
+/* 
+ ───────────────────────────────────────────────────── main 🦺 
+*/
+
+/* 메인
+최상단 비쥬얼 */
+.main_Pnuvisual {
+    position: relative;
+}
+
+
+.main_Pnuvisual .main_slide .itm {
+    position: relative;
+    height: calc(100vh - 30px);
+    min-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_Pnuvisual .main_slide .itm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.main_Pnuvisual .main_slide .itm01 {
+    background: url(../images/mainVisual01.jpg) no-repeat bottom center/cover;
+}
+
+.main_Pnuvisual .main_slide .itm02 {
+    background: url(../images/mainVisual03.jpg) no-repeat center center/cover;
+}
+
+.main_Pnuvisual .main_slide .itm03 {
+    background: url(../images/mainVisual05.png) no-repeat center center/cover;
+}
+
+.main_Pnuvisual .sub_slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.main_Pnuvisual .sub_slide .content {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    color: var(--c-w);
+    text-align: right;
+}
+
+.main_Pnuvisual .sub_slide .slogan {
+    padding: 50px;
+}
+
+.main_Pnuvisual .slogan h3 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.main_Pnuvisual .slogan p {
+    color: var(--c-ww);
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 28px 0;
+}
+
+.main_Pnuvisual .sub_slide .content::before {
+    content: "";
+    position: absolute;
+    bottom: calc(50% + 10px);
+    right: 10px;
+    z-index: -1;
+    transform: translate(0, 50%);
+    width: 750px;
+    height: 230px;
+    background: rgba(0, 90, 171, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.main_Pnuvisual .slide_nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1170px;
+    width: 100%;
+}
+
+.main_Pnuvisual .arrow i {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    padding: 10px;
+    font-size: 20px;
+    color: var(--c-main);
+    background: var(--c-w);
+}
+
+.main_Pnuvisual .arrow .right {
+    top: -5px;
+    margin: 0 0 0 590px;
+}
+
+.main_Pnuvisual .arrow .left {
+    top: -50px;
+    margin: 0 0 0 590px;
+}
+
+
+/* quick menu */
+
+.main_Pnuvisual .qmenu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: calc(1185px + ((1920px - 1200px) / 2));
+
+    color: var(--c-w);
+    background: var(--c-set);
+    border-radius: 0 10px 0 0;
+    overflow: hidden;
+}
+
+.main_Pnuvisual .qmenu li {
+    transition: 0.2s;
+}
+
+.main_Pnuvisual .qmenu li a {
+    display: block;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main_Pnuvisual .qmenu li:nth-child(2),
+.main_Pnuvisual .qmenu li:nth-child(4),
+.main_Pnuvisual .qmenu li:nth-child(6) {
+    background: var(--c-sub);
+}
+
+.main_Pnuvisual .qmenu li:hover {
+    background: var(--c-main);
+}
+
+.main_Pnuvisual .qmenu span {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+}
+
+.main_Pnuvisual .qmenu strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+
+.main_Pnuvisual .scroll {
+    position: absolute;
+    bottom: 120px;
+    right: 100px;
+    z-index: 999;
+}
+
+.main_Pnuvisual .scroll span {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    writing-mode: vertical-rl;
+}
+
+.main_Pnuvisual .scroll span::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: calc(50% + 3px);
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.main_Pnuvisual .scroll span::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: calc(50% + 3px);
+    transform: translate(-50%, 0);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    animation: circle 2s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, 0);
+        outline: 0 solid rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        transform: translate(-50%, 100px);
+        outline: 10px solid rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+        outline: 0 solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* =======================================
+메인
+섹션01 PNU 포커스 
+=======================================*/
+.main_Pnufocus .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_Pnufocus .title a {
+    display: block;
+    padding: 0 15px 0 0;
+    user-select: none;
+}
+
+.main_Pnufocus .title a span {
+    position: relative;
+    color: var(--c-bb);
+}
+
+.main_Pnufocus .title a span::after {
+    content: "\F4FE";
+    font-family: bootstrap-icons;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translate(0, -50%);
+    font-size: 15px;
+    color: var(--c-main);
+    vertical-align: middle;
+}
+
+.main_Pnufocus .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.main_Pnufocus .content .itm {
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--c-wb);
+
+    outline: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.5s;
+}
+
+.main_Pnufocus .content .itm:hover {
+    outline: 2px solid var(--c-sub);
+}
+
+.main_Pnufocus .content .itm .box {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.main_Pnufocus .content .itm .box img {
+    transform: scale(1.3);
+}
+
+.main_Pnufocus .content .txt {
+    padding: 25px 15px;
+    background: var(--c-wb);
+}
+
+.main_Pnufocus .txt strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--c-sub);
+    margin: 0 0 5px 0;
+}
+
+.main_Pnufocus .txt h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    word-break: keep-all;
+    height: 130px;
+}
+
+.main_Pnufocus .txt p {
+    color: var(--c-g6);
+    margin: 0 0 30px 0;
+}
+
+
+.main_Pnufocus .txt span {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: var(--c-g6);
+}
+
+
+/* =======================================
+메인
+섹션02 PNU 뉴스
+=======================================*/
+
+.main_Pnunews {
+    background: url(../images/mainNews.jpg) no-repeat center center/cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+}
+
+.main_Pnunews .PNEWS {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 50px;
+    margin: 0 auto 70px auto;
+}
+
+/* 02 좌 */
+.main_Pnunews .PN_left h3 {
+    font-family: 'Roboto';
+    color: var(--c-w);
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.main_Pnunews .PN_left strong {
+    display: block;
+    font-weight: 700;
+    font-family: 'Pretendard-Regular';
+}
+
+.main_Pnunews .PN_left p {
+    font-family: 'Noto Sans Kr';
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 02 우 */
+.main_Pnunews .PN_right {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_Pnunews .bbsNotice {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.main_Pnunews .bbsNotice li {
+    position: relative;
+    padding: 20px 30px;
+    background: var(--c-set);
+    outline: var(--line-b);
+    color: var(--c-wb);
+}
+
+
+.main_Pnunews .bbsNotice li.on {
+    color: var(--c-main);
+    background: var(--c-w);
+    outline: none;
+}
+
+.main_Pnunews .bbsContent {
+    background: var(--c-wb);
+}
+
+
+.main_Pnunews .bbsContent>li {
+    display: none;
+    padding: 30px;
+}
+
+.main_Pnunews .bbsContent>li.on {
+    display: block;
+}
+
+.main_Pnunews .bbsContent>li .bbslist {
+    width: 800px;
+}
+
+.main_Pnunews .bbslist>li {
+    position: relative;
+}
+
+.main_Pnunews .bbslist>li~li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--c-line);
+}
+
+.main_Pnunews .bbsContent>li .bbslist>li>a {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    line-height: 50px;
+    padding: 0 0 0 20px;
+}
+
+.main_Pnunews .bbslist>li>a::before {
+    content: "\F231";
+    font-family: bootstrap-icons;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    font-size: 10px;
+    color: var(--c-main);
+}
+
+.main_Pnunews .bbslist>li>a p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main_Pnunews .bbslist>li:hover>a p {
+    text-decoration: underline;
+}
+
+.main_Pnunews .bbslist>li>a span {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--c-g6);
+}
+
+.main_Pnunews .more {
+    text-align: center;
+    color: var(--c-w);
+}
+
+.main_Pnunews .more a {
+    position: relative;
+    display: block;
+    font-weight: 500;
+}
+
+.main_Pnunews .more a::before {
+    content: "\F27E";
+    font-family: bootstrap-icons;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 20px;
+    color: var(--c-w);
+    animation: updown 1s 1s infinite alternate;
+}
+
+@keyframes updown {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 10px);
+    }
+}
+
+
+
+/* =======================================
+메인
+섹션03 PNU screen
+=======================================*/
+.main_PnuScreen {
+    position: relative;
+}
+
+.main_PnuScreen .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_PnuScreen .title a span {
+    position: relative;
+    color: var(--c-bb);
+}
+
+.main_PnuScreen .title a span::after {
+    content: "\F4FE";
+    font-family: bootstrap-icons;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translate(0, -50%);
+    font-size: 15px;
+    color: var(--c-main);
+    vertical-align: middle;
+}
+
+
+.main_PnuScreen .content {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: start;
+    gap: 20px;
+}
+
+.main_PnuScreen .content .screen_list,
+.main_PnuScreen .content .screen_slide {
+    overflow: hidden;
+}
+
+.main_PnuScreen .screen_list .itm img {
+    object-fit: cover;
+    margin: 0 0 5px 0;
+}
+
+.main_PnuScreen .screen_slide .itm {
+    display: flex;
+    height: 100%;
+
+}
+
+.main_PnuScreen .screen_list .slick-active,
+.main_PnuScreen .screen_list .slick-slide {
+    position: relative;
+    filter: grayscale(1);
+    transform: scale(0.85);
+    transition: 0.5s;
+}
+
+.main_PnuScreen .screen_list .slick-active::after,
+.main_PnuScreen .screen_list .slick-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.main_PnuScreen .screen_list .slick-center {
+    filter: grayscale(0);
+    transform: scale(1);
+}
+
+.main_PnuScreen .screen_list .slick-center::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: none;
+}
+
+.main_PnuScreen .screen_slide .img_box {
+    margin: 0 0 0 10px;
+}
+
+.main_PnuScreen .screen_slide .desc {
+    width: 700px;
+    padding: 40px 30px;
+    background: var(--c-wb);
+    word-break: keep-all;
+}
+
+.main_PnuScreen .screen_slide .desc h3 {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+.main_PnuScreen .screen_slide .desc span {
+    display: block;
+    font-size: 14px;
+    margin: 0 0 130px 0;
+    color: var(--c-g6);
+}
+
+.main_PnuScreen .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    max-width: 1170px;
+    width: 100%;
+}
+
+.main_PnuScreen .arrow i {
+    padding: 10px;
+    font-size: 14p;
+    background: var(--c-main);
+    color: var(--c-w);
+}
+
+.main_PnuScreen .arrow .left {
+    position: absolute;
+    top: -20px;
+    right: -17px;
+}
+
+.main_PnuScreen .arrow .right {
+    position: absolute;
+    top: 20px;
+    right: -17px;
+}
+
+
+/* =======================================
+메인
+섹션04 PNU 유저 메뉴
+=======================================*/
+.main_Pnuuserlink {
+    padding: 70px 0 0 0;
+    background: url(../images/ptn1.gif) repeat center top;
+}
+
+.main_Pnuuserlink .PU_user {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto 50px auto;
+    max-width: 840px;
+}
+
+.main_Pnuuserlink .PU_user li {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    background: var(--c-w);
+    border: var(--line);
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.main_Pnuuserlink .PU_user li.on {
+    outline: 4px solid var(--c-sub);
+    border: none;
+    transition: 0.1s;
+}
+
+.main_Pnuuserlink .PU_user span {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--c-g6);
+}
+
+.main_Pnuuserlink .PU_user li.on span {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--c-main);
+}
+
+
+.main_Pnuuserlink .content {
+    padding: 75px 0;
+    height: 250px;
+    background: var(--c-set);
+    clip-path: polygon(50% 0, 48% 10%, 0 10%, 0 100%, 100% 100%, 100% 10%, 52% 10%);
+}
+
+.main_Pnuuserlink .PU_content>li {
+    display: none;
+}
+
+.main_Pnuuserlink .PU_content>li.on {
+    display: block;
+}
+
+.main_Pnuuserlink .Purl {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    gap: 10px;
+}
+
+.main_Pnuuserlink .Purl li {
+    color: var(--c-main);
+    background: var(--c-wb);
+}
+
+.main_Pnuuserlink .Purl li:hover {
+    color: var(--c-w);
+    background: var(--c-main);
+    transition: 0.5s;
+}
+
+.main_Pnuuserlink .Purl li a {
+    display: block;
+    padding: 20px 20px;
+}
+
+
+
+/* =======================================
+메인
+섹션05 PNU 타캠퍼스 둘러보기
+=======================================*/
+.main_Pnucampus {
+    padding: 50px 0;
+}
+
+.main_Pnucampus .content_top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 15px 0;
+}
+
+.main_Pnucampus .content_top .PC_left {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.main_Pnucampus .PC_left .cam_list {
+    position: relative;
+    transition: 0.5s;
+}
+
+.main_Pnucampus .PC_left .cam_list:hover {
+    transform: translate(0, -10px);
+}
+
+.main_Pnucampus .PC_left .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.main_Pnucampus .PC_left .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.main_Pnucampus .PC_left .desc {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, 0);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--c-w);
+}
+
+.main_Pnucampus .PC_left .desc strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.main_Pnucampus .PC_left .desc h3 {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.main_Pnucampus .PC_left .cl01 .desc h3::after {
+    content: "부산캠퍼스";
+    position: absolute;
+    top: 142px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 13px;
+    font-weight: 300;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.main_Pnucampus .PC_left .cl02 .desc h3::after {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background: url(../images/mainCampus02_cam.png) no-repeat center center;
+    width: 160px;
+    height: 22px;
+
+    font-size: 13px;
+    font-weight: 300;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.main_Pnucampus .PC_left .cl03 .desc h3::after {
+    content: "밀양캠퍼스";
+    position: absolute;
+    top: 142px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 13px;
+    font-weight: 300;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.main_Pnucampus .PC_left .cl04 .desc h3::after {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background: url(../images/mainCampus05_cam.png) no-repeat center center;
+    width: 160px;
+    height: 22px;
+    font-size: 13px;
+    font-weight: 300;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.main_Pnucampus .PC_right {
+    position: relative;
+    transition: 0.5s;
+}
+
+.main_Pnucampus .PC_right:hover {
+    transform: translate(0, -10px);
+}
+
+.main_Pnucampus .PC_right .desc {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: var(--c-w);
+    font-size: 30px;
+}
+
+.main_Pnucampus .PC_right strong {
+    font-weight: 500;
+}
+
+.main_Pnucampus .PC_right span {
+    font-weight: 300;
+}
+
+
+/* content bottom */
+
+.main_Pnucampus .content_bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.main_Pnucampus .qserv {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.main_Pnucampus .qserv a {
+    display: block;
+    padding: 15px 22px;
+    text-align: center;
+
+    font-size: 15px;
+    background: var(--c-wb);
+    border: var(--line);
+    transition: 0.3s;
+}
+
+.main_Pnucampus .qserv a:hover {
+    background: var(--c-main);
+    color: var(--c-w);
+}
+
+.main_Pnucampus .qslide {
+    position: relative;
+    max-width: 375px;
+}
+
+.main_Pnucampus .qslide .itm {
+    height: 100px;
+}
+
+.main_Pnucampus .qslide .itm01 {
+    background: url(../images/mainCSlide01.jpg) no-repeat center center/cover;
+}
+
+.main_Pnucampus .qslide .itm02 {
+    background: url(../images/mainCSlide02.jpg) no-repeat center center/cover;
+}
+
+.main_Pnucampus .qslide .itm03 {
+    background: url(../images/mainCSlide03.jpg) no-repeat center center/cover;
+}
+
+
+
+
+
+/* =======================================
+메인
+섹션05 PNU 배너
+=======================================*/
+
+.main_Pnubanner {
+    padding: 50px 0;
+    background: url(../images/ptn1.gif) repeat center top;
+}
+
+.main_Pnubanner .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.main_Pnubanner .text {
+    text-align: center;
+}
+
+.main_Pnubanner .text h3 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--c-bb);
+    margin: 0 0 10px 0;
+}
+
+.main_Pnubanner .text h3 strong {
+    color: var(--c-main);
+}
+
+.main_Pnubanner .text p {
+    letter-spacing: 20px;
+    margin: 0 0 0 10px;
+    color: var(--c-g6);
+}
+
+
+
+
+
+
+
+/* 
+ ───────────────────────────────────────────────────── footer 👟
+*/
+.footer {
+    border-top: var(--line);
+}
+
+.footer .ft {
+    padding: 20px 0;
+    background: var(--c-w);
+    border-bottom: 1px solid var(--c-ww);
+}
+
+.footer .foot_customer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer .foot_customer strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--c-main);
+}
+
+.footer .foot_customer li {
+    position: relative;
+}
+
+.footer .foot_customer li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 10px;
+    background: var(--c-line);
+}
+
+
+
+.footer .fb {
+    padding: 30px 0 80px 0;
+}
+
+.footer .fb .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer .foot_pnucampus {
+    margin: 0 0 20px 0;
+}
+
+.footer .foot_pnucampus li {
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--c-g6);
+}
+
+.footer .foot_pnucampus strong {
+    font-weight: 600;
+}
+
+.footer .foot_pnucampus span {
+    position: relative;
+    margin: 0 10px 0 0;
+}
+
+.footer .foot_pnucampus span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translate(0, -50%);
+    width: 2px;
+    height: 2px;
+    background: var(--c-set);
+    border-radius: 50%;
+
+}
+
+.footer .foot_pnucampus .tel {
+    font-weight: 600;
+}
+
+
+.footer .foot_copyright {
+    font-size: 14px;
+    color: var(--c-g9);
+}
+
+.footer .foot_sns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer .foot_sns i {
+    font-size: 22px;
+    color: var(--c-sub);
+}
+
+
+
+/* 
+     ───────────────────────────────────────────────────── side 🎈 
+    */
+.side {
+    display: none;
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    z-index: 1000;
+    transform: translate(0, -50%);
+    text-align: center;
+
+    width: 130px;
+    border-radius: 10px;
+    overflow: hidden;
+    word-break: keep-all;
+    user-select: none;
+    cursor: pointer;
+}
+
+.side li~li {
+    margin: 5px 0 0 0;
+}
+
+.side .suser li>a {
+    display: block;
+    padding: 40px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--c-w);
+    background: var(--c-sub);
+}
+
+.side .slist li>a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 14px;
+    background: var(--c-wb);
+    color: var(--c-g6);
+}
+
+.side .slist {
+    margin: 5px 0 0 0;
+}
+
+.side .slist .top {
+    padding: 15px 20px;
+    font-size: 14px;
+    background: var(--c-wb);
+    color: var(--c-g6);
+}
+
+
+.side .suser li a,
+.side .slist li a,
+.side .slist .top {
+    transition: 0.5s;
+}
+
+.side .slist li:hover a,
+.side .suser li:hover a,
+.side .slist .top:hover {
+    background: var(--c-main);
+    color: var(--c-w);
+}
+
+/* 
+ ───────────────────────────────────────────────────── 모바일 반응형
+*/
+.mobile_menu {
+    display: none;
+}
+
+
+
+@media (max-width:768px) {
+
+
+    .header {
+        border-bottom: var(--line-b);
+    }
+
+    .header .header_top {
+        display: none;
+    }
+
+    .header .header_warp {
+        top: 0;
+        height: 100px;
+        z-index: 1002;
+    }
+
+    .header h1 {
+        position: fixed;
+        top: 30px;
+        z-index: 1000;
+        padding: 0 0 0 15px;
+    }
+
+    .header .gnb {
+        position: fixed;
+        inset: 0 auto 0 100%;
+        background: var(--c-w);
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .header .gnb.on {
+        inset: 0 auto 0 0;
+    }
+
+    .header .gnb>ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 150px 30px 0 30px;
+    }
+
+    .header .gnb>ul>li~li::before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: 1px;
+        background: var(--c-line);
+    }
+
+    .header .gnb>ul>li:hover {
+        color: var(--c-main);
+    }
+
+    .header .gnb a {
+        line-height: 50px;
+    }
+
+    .header.on .header_warp {
+        border-bottom: var(--line);
+        background: var(--c-w);
+    }
+
+    .header.on h1 a {
+        background: url(../images/logo.png);
+    }
+
+    .header.on .gnb>ul>li {
+        color: var(--c-bb);
+    }
+
+    .header.on .gnb>ul>li~li::before {
+        background: var(--c-line);
+    }
+
+    .mobile_menu {
+        display: block;
+
+        position: fixed;
+        inset: 30px 30px auto auto;
+        z-index: 1002;
+        padding: 10px;
+        background: var(--c-sub);
+        color: var(--c-w);
+        border-radius: 5px;
+    }
+
+
+
+    /* 
+     ───────────────────────────────────────────────────── main 🦺 
+    */
+
+    .main_Pnuvisual {
+        height: 800px;
+        overflow: hidden;
+    }
+
+    .main_Pnuvisual .num,
+    .main_Pnuvisual .scroll {
+        display: none;
+    }
+
+    .main_Pnuvisual .main_slide .itm {
+        height: 800px;
+        min-width: 0;
+        max-width: 768px;
+    }
+
+    .main_Pnuvisual .main_slide .itm::before {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 60%);
+    }
+
+    .main_Pnuvisual .main_slide .slogan {
+
+        bottom: calc(50% + 100px);
+        right: 0;
+        transform: translate(0, 100%);
+        text-align: center;
+    }
+
+    .main_Pnuvisual .slogan h3 {
+        font-size: 30px;
+        margin: 0 0 8px 0;
+    }
+
+    .main_Pnuvisual .slogan p {
+        color: var(--c-ww);
+        font-size: 15px;
+        margin: 0 0 28px 0;
+    }
+
+    .main_Pnuvisual .main_slide .slogan::before {
+        border-radius: 0;
+    }
+
+    .main_Pnuvisual .slide_nav {
+        max-width: 738px;
+    }
+
+    .main_Pnuvisual .arrow i {
+        position: absolute;
+        top: calc(50% - 60px);
+        right: 0;
+        transform: translate(0, -50%);
+        font-size: 20px;
+        color: var(--c-w);
+        margin: 0 15px;
+    }
+
+    .main_Pnuvisual .arrow .left {
+        right: auto;
+    }
+
+    .main_Pnuvisual .qmenu {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 738px;
+        width: 100%;
+        background: var(--c-w);
+        color: var(--c-bb);
+        border-radius: 0;
+        border-bottom: 1px solid var(--c-line);
+        white-space: nowrap;
+    }
+
+
+    .main_Pnuvisual .qmenu li:nth-child(2),
+    .main_Pnuvisual .qmenu li:nth-child(4),
+    .main_Pnuvisual .qmenu li:nth-child(6) {
+        background: var(--c-wb);
+    }
+
+    .main_Pnuvisual .qmenu li:hover {
+        color: var(--c-w);
+        background: var(--c-sub);
+    }
+
+    .main_Pnuvisual .qmenu strong {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .main_Pnufocus .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main_Pnufocus .content .itm {
+        outline: 1px solid var(--c-line);
+    }
+
+    .main_Pnufocus .content .itm:hover {
+        outline: 1px solid var(--c-line);
+    }
+
+    .main_Pnufocus .txt h3 {
+        height: auto;
+    }
+
+    .main_Pnunews .PNEWS {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main_Pnunews .bbsNotice li {
+        padding: 20px 15px;
+    }
+
+    .main_Pnunews .bbsContent>li .bbslist {
+        width: calc(100% - 30px);
+    }
+
+    .main_Pnunews .bbslist>li>a p {
+        line-height: 22px;
+    }
+
+    .main_PnuScreen .content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+
+    .main_PnuScreen .screen_list {
+        order: 2;
+    }
+
+    .main_PnuScreen .screen_list .itm img {
+        padding: 0 5px;
+    }
+
+    .main_PnuScreen .screen_slide .img_box {
+        margin: 0;
+    }
+
+    .main_PnuScreen .screen_slide .itm {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main_PnuScreen .screen_slide .desc {
+        width: 100%;
+    }
+
+    .main_PnuScreen .screen_slide .desc span {
+        margin: 0 0 20px 0;
+    }
+
+    .main_PnuScreen .arrow .left {
+        position: absolute;
+        top: 130px;
+        right: 80px;
+    }
+
+    .main_PnuScreen .arrow .right {
+        position: absolute;
+        top: 130px;
+        right: 35px;
+    }
+
+    .main_Pnuuserlink {
+        padding: 50px 0 0 0;
+    }
+
+    .main_Pnuuserlink .PU_user {
+        gap: 10px;
+        max-width: 738px;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto 30px auto;
+    }
+
+    .main_Pnuuserlink .PU_user li {
+        width: auto;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 0;
+    }
+
+    .main_Pnuuserlink .PU_user li.on {
+        outline: none;
+        border: none;
+        transition: 0;
+        background: var(--c-set);
+    }
+
+    .main_Pnuuserlink .PU_user span {
+        font-size: 16px;
+        font-weight: 400px;
+    }
+
+    .main_Pnuuserlink .PU_user li.on span {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--c-w);
+    }
+
+    .main_Pnuuserlink .content {
+        height: 300px;
+    }
+
+    .main_Pnuuserlink .Purl {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main_Pnuuserlink .Purl li {
+        font-size: 14px;
+    }
+
+    .main_Pnuuserlink .Purl li a {
+        padding: 13px;
+    }
+
+    .main_Pnucampus .content_top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main_Pnucampus .PC_left .cam_list:hover,
+    .main_Pnucampus .PC_right:hover {
+        transform: translate(0, 0);
+    }
+
+    .main_Pnucampus .PC_left .cl01 .desc h3::after,
+    .main_Pnucampus .PC_left .cl02 .desc h3::after,
+    .main_Pnucampus .PC_left .cl03 .desc h3::after,
+    .main_Pnucampus .PC_left .cl04 .desc h3::after {
+        display: none;
+    }
+
+    .main_Pnucampus .PC_right img {
+        max-width: 736px;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .main_Pnucampus .content_bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main_Pnucampus .qserv {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .main_Pnucampus .qserv a {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+
+    .main_Pnucampus .qslide {
+        display: none;
+    }
+
+    .main_Pnubanner .content {
+        gap: 10px;
+    }
+
+    .main_Pnubanner .box img {
+        max-width: 180px
+    }
+
+    .main_Pnubanner .text {
+        text-align: left;
+    }
+
+    .main_Pnubanner .text h3 {
+        font-size: 30px;
+        margin: 0 0 5px 0;
+    }
+
+    .main_Pnubanner .text p {
+        letter-spacing: 0;
+        margin: 0;
+    }
+
+
+    .footer .foot_customer {
+        flex-wrap: wrap;
+    }
+
+    .footer .fb .content {
+        flex-direction: column-reverse;
+    }
+
+    .footer .foot_sns {
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 0 20px 0;
+    }
+
+    .footer address {
+        text-align: center;
+    }
+
+    .side {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translate(0, 0);
+        display: none;
+    }
+}
